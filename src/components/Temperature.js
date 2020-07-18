@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from '../styles/Temperature.module.scss';
 
 const Temperature = ({ temperature }) => {
   const [temperatureScale, setTemperatureScale] = useState('C');
@@ -11,16 +12,25 @@ const Temperature = ({ temperature }) => {
   }
 
   const onClickScale = (scale) => {
-    console.log(temperatureScale);
+    const celsius = document.getElementById('celsius');
+    const fahreneit = document.getElementById('fahreneit');
+
+    if(scale === 'C') {
+      fahreneit.classList.remove(styles.selected);
+      celsius.classList.add(styles.selected);
+    } else {
+      celsius.classList.remove(styles.selected);
+      fahreneit.classList.add(styles.selected);
+    }
     setTemperatureScale(scale);
   }
 
   return (
-    <div>
-      <div>{getTemperature()}</div>
-      <div>
-        <div onClick={() => onClickScale('C')}>°C</div>
-        <div onClick={() => onClickScale('F')}>°F</div>
+    <div className={styles.temperatureBox}>
+      <div className={styles.temperatureValue}>{getTemperature()}</div>
+      <div className={styles.scaleBox}>
+        <div id='celsius' className={styles.scale} onClick={() => onClickScale('C')}>°C</div>
+        <div id='fahreneit' className={styles.scale} onClick={() => onClickScale('F')}>°F</div>
       </div>
     </div>
   );

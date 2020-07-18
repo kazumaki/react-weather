@@ -1,0 +1,31 @@
+.weatherDetails {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #66B2FF;
+  text-align: center;
+  width: 100%;
+}
+
+.mainContainer {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.description {
+  text-align: center;
+  width: 100%;
+}
+
+.icon {
+  width: 50%;
+}
+
+.date {
+  width: 100%;
+  text-align: center;
+}
