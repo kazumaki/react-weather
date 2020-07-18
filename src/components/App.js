@@ -8,7 +8,7 @@ const App = () => {
   const [fetchData, setFetch] = useState({isFetcing: false});
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Header />
       <div className={styles.mainContainer}>
         <SearchForm setFetch={setFetch} />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import config from '../config';
 import Axios from 'axios';
+import styles from '../styles/SearchForm.module.scss';
 
 const SearchForm = ({setCurrentCity, setFetch}) => {
   const [cityName, setCityName] = useState("");
@@ -23,10 +24,12 @@ const SearchForm = ({setCurrentCity, setFetch}) => {
   } 
 
   return (
-    <form onSubmit={fetchWeatherData}>
-      <input type="text" name="cityName" value={cityName} onChange={handleOnChange} />
-      <input type="submit"  />
-    </form>
+    <div className={styles.searchBox}>
+      <form onSubmit={fetchWeatherData}>
+        <input type="text" name="cityName" value={cityName} onChange={handleOnChange} />
+        <input type="submit"  />
+      </form>
+    </div>
   )
 };
 

@@ -3,9 +3,7 @@ import styles from '../styles/Header.module.scss';
 
 const Header = () => (
   <header className={styles.header}>
-    <div>
-      Weather
-    </div>
+    Weather
   </header>
 )
 
