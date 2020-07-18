@@ -4,9 +4,8 @@ import styles from '../styles/Header.module.scss';
 const Header = () => (
   <header className={styles.header}>
     <div>
-      My Weather App
+      Weather
     </div>
-    <i className="fas fa-cloud"></i>
   </header>
 )
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Temperature from './Temperature';
 import WeatherDetails from './WeatherDetails';
 
 const WeatherCard = ({ fetchData }) => {
